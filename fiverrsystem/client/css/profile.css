@@ -1,0 +1,352 @@
+/* profile.css */
+
+/* Global Styles */
+body {
+  font-family: "Arial", sans-serif;
+  background: linear-gradient(135deg, #f5f7fa 0%, #c3cfe2 100%);
+  min-height: 100vh;
+  line-height: 1.6;
+}
+
+/* Navigation Styles - Consistent with other pages */
+.navbar {
+  background: linear-gradient(90deg, #667eea 0%, #764ba2 100%) !important;
+  box-shadow: 0 4px 20px rgba(0,0,0,0.15);
+}
+
+.navbar-brand {
+  font-weight: bold;
+  font-size: 1.5rem;
+  color: white !important;
+  text-shadow: 1px 1px 2px rgba(0,0,0,0.3);
+}
+
+.nav-link {
+  font-weight: 500;
+  color: rgba(255,255,255,0.9) !important;
+  transition: all 0.3s ease;
+  margin: 0 0.5rem;
+}
+
+.nav-link:hover {
+  color: white !important;
+  transform: translateY(-2px);
+  text-shadow: 0 2px 4px rgba(0,0,0,0.2);
+}
+
+/* Dropdown Styles - Consistent */
+.dropdown:hover > .dropdown-menu {
+  display: block;
+  animation: slideDown 0.3s ease;
+}
+
+.dropright:hover > .dropdown-menu {
+  display: block;
+  animation: slideRight 0.3s ease;
+}
+
+.dropdown-menu {
+  border: none;
+  border-radius: 12px;
+  box-shadow: 0 8px 30px rgba(0,0,0,0.15);
+  background: linear-gradient(135deg, #ffffff 0%, #f8f9fa 100%);
+  min-width: 200px;
+}
+
+.dropdown-item {
+  padding: 0.75rem 1.25rem;
+  font-weight: 500;
+  transition: all 0.3s ease;
+  border-radius: 8px;
+  margin: 0.25rem;
+}
+
+.dropdown-item:hover {
+  background: linear-gradient(45deg, #667eea, #764ba2);
+  color: white !important;
+  transform: translateX(5px);
+}
+
+/* Button Styles - Consistent */
+.btn-outline-danger {
+  border: 2px solid #dc3545;
+  color: #dc3545;
+  font-weight: 600;
+  border-radius: 25px;
+  padding: 0.75rem 1.5rem;
+  transition: all 0.3s ease;
+}
+
+.btn-outline-danger:hover {
+  background: linear-gradient(45deg, #dc3545, #c82333);
+  transform: translateY(-2px);
+  box-shadow: 0 5px 15px rgba(220, 53, 69, 0.3);
+  color: white !important;
+}
+
+.btn-primary {
+  background: linear-gradient(45deg, #007bff, #0056b3);
+  border: none;
+  border-radius: 25px;
+  padding: 0.75rem 1.5rem;
+  font-weight: 600;
+  transition: all 0.3s ease;
+}
+
+.btn-primary:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 5px 15px rgba(0,123,255,0.3);
+  background: linear-gradient(45deg, #0056b3, #004085);
+}
+
+/* Main Content */
+.container-fluid {
+  padding: 2rem;
+}
+
+.display-4 {
+  font-weight: 300;
+  color: #2c3e50;
+  text-shadow: 1px 1px 2px rgba(0,0,0,0.1);
+  margin-bottom: 2rem;
+  background: linear-gradient(45deg, #2c3e50, #34495e);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+/* Profile Card */
+.card {
+  border: none;
+  border-radius: 20px;
+  background: linear-gradient(135deg, #ffffff 0%, #f8f9fa 100%);
+  box-shadow: 0 15px 50px rgba(0,0,0,0.1);
+  overflow: hidden;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  animation: fadeInUp 0.6s ease;
+}
+
+.card:hover {
+  transform: translateY(-10px);
+  box-shadow: 0 25px 60px rgba(0,0,0,0.15);
+}
+
+.card-body {
+  padding: 3rem;
+}
+
+/* Profile Image */
+.img-fluid {
+  width: 250px;
+  height: 250px;
+  border-radius: 50%;
+  object-fit: cover;
+  border: 5px solid #fff;
+  box-shadow: 0 10px 30px rgba(0,0,0,0.2);
+  transition: all 0.3s ease;
+}
+
+.img-fluid:hover {
+  transform: scale(1.05);
+  box-shadow: 0 15px 40px rgba(0,0,0,0.3);
+}
+
+/* Profile Info */
+h1, h3 {
+  color: #2c3e50;
+  font-weight: 600;
+}
+
+h3 {
+  margin: 1rem 0;
+  padding: 0.5rem;
+  background: linear-gradient(45deg, #f8f9fa, #e9ecef);
+  border-radius: 10px;
+  text-align: center;
+}
+
+/* Form Styles */
+.form-group {
+  margin-bottom: 1.5rem;
+}
+
+.form-control {
+  border: 2px solid #e9ecef;
+  border-radius: 12px;
+  padding: 1rem 1.25rem;
+  font-size: 1rem;
+  transition: all 0.3s ease;
+  background: linear-gradient(135deg, #f8f9fa, #ffffff);
+}
+
+.form-control:focus {
+  border-color: #667eea;
+  box-shadow: 0 0 0 0.3rem rgba(102, 126, 234, 0.25);
+  transform: scale(1.02);
+}
+
+.form-control:disabled {
+  background: linear-gradient(135deg, #e9ecef, #f8f9fa);
+  color: #6c757d;
+}
+
+label {
+  font-weight: 600;
+  color: #2c3e50;
+  margin-bottom: 0.5rem;
+  display: block;
+}
+
+textarea.form-control {
+  min-height: 120px;
+  resize: vertical;
+  border-radius: 12px;
+}
+
+/* Success/Error Messages */
+h1[style*="color: green"],
+h1[style*="color: red"] {
+  padding: 1rem;
+  border-radius: 12px;
+  margin-bottom: 1rem;
+  font-size: 1.2rem;
+  text-align: center;
+  font-weight: 600;
+}
+
+h1[style*="color: green"] {
+  background: linear-gradient(135deg, #d4edda, #c3e6cb);
+  border: 2px solid #28a745;
+  color: #155724 !important;
+}
+
+h1[style*="color: red"] {
+  background: linear-gradient(135deg, #f8d7da, #f5c6cb);
+  border: 2px solid #dc3545;
+  color: #721c24 !important;
+}
+
+/* Animation Keyframes */
+@keyframes slideDown {
+  from {
+    opacity: 0;
+    transform: translateY(-10px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes slideRight {
+  from {
+    opacity: 0;
+    transform: translateX(-10px);
+  }
+  to {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
+@keyframes fadeInUp {
+  from {
+    opacity: 0;
+    transform: translateY(30px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .card-body {
+    padding: 2rem;
+  }
+  
+  .img-fluid {
+    width: 200px;
+    height: 200px;
+  }
+  
+  .display-4 {
+    font-size: 2.5rem;
+  }
+  
+  .navbar-nav {
+    text-align: center;
+  }
+  
+  .dropdown-menu {
+    text-align: center;
+  }
+}
+
+@media (max-width: 576px) {
+  .container-fluid {
+    padding: 1rem;
+  }
+  
+  .card-body {
+    padding: 1.5rem;
+  }
+  
+  .img-fluid {
+    width: 150px;
+    height: 150px;
+  }
+  
+  h3 {
+    font-size: 1.2rem;
+  }
+  
+  .form-control {
+    padding: 0.75rem 1rem;
+  }
+  
+  .btn {
+    padding: 0.6rem 1.2rem;
+    font-size: 0.9rem;
+  }
+  
+  .navbar-brand {
+    font-size: 1.2rem;
+  }
+}
+
+/* Text Center Alignment */
+.text-center {
+  text-align: center;
+}
+
+/* Float Utilities */
+.float-right {
+  float: right;
+}
+
+/* Margin Utilities */
+.mt-2 { margin-top: 0.5rem; }
+.mt-4 { margin-top: 1.5rem; }
+.mb-4 { margin-bottom: 1.5rem; }
+
+/* Row and Column Styling */
+.row {
+  margin: 0 -15px;
+}
+
+.col-md-6, .col-md-10 {
+  padding: 0 15px;
+}
+
+/* File Input Styling */
+input[type="file"].form-control {
+  padding: 0.75rem;
+  border: 2px dashed #dee2e6;
+  background: linear-gradient(135deg, #f8f9fa, #e9ecef);
+}
+
+input[type="file"].form-control:hover {
+  border-color: #667eea;
+  background: linear-gradient(135deg, #e9ecef, #f8f9fa);
+}
